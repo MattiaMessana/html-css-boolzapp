@@ -1,0 +1,53 @@
+
+/* METODO UTILIZZATO : MOBILE FIRST  */
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COMMON */
+
+img {
+    max-width: 100%;
+}
+
+
+/* UTILITIES */
+
+
+
+/* HEADER */
+
+header {
+    /* background-color: #EAEAEA; */
+
+    /* debug */
+    background-color: aqua;
+    height: 90px;
+}
+
+
+/* TEX-SECTION */
+
+.text-container {
+
+    /* debug */
+    background-color: gold ;
+    min-height: 700px;
+
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+    /* debug */
+    background-color: blueviolet;
+    min-height: 54px;
+}
