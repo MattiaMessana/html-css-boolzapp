@@ -23,12 +23,56 @@ img {
 /* HEADER */
 
 header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
     /* background-color: #EAEAEA; */
 
     /* debug */
     background-color: aqua;
-    height: 90px;
+    /* height: 90px; */
 }
+
+.avatar {
+    width: 20%;
+    padding: 5px;
+    text-align: left;
+}
+
+.avatar img {
+    
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    padding: 5px;
+
+}
+
+.info-avatar {
+    width: 80%;
+}
+
+.utility {
+    display: none;
+}
+
+
+@media screen and (min-width:768px) {
+
+    .header {
+    justify-content: space-between;
+    gap: 0;
+        
+    }
+
+
+    .utility {
+        display: inline-block;
+    }
+}
+
 
 
 /* TEX-SECTION */
