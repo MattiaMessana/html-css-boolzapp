@@ -37,8 +37,8 @@ img {
     width: 0px;
     height: 100%;
     border-right: 1px solid lightgray;
+    background-color: white;
 }
-
 
 .users {
     border-top: 1px solid lightgrey;
