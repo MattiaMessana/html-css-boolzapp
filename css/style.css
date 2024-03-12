@@ -18,26 +18,102 @@ img {
 
 /* UTILITIES */
 
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    /* debug */
+    background-color: aqua;
+}
 
+.app-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* debug */
+    /* background-color: tomato; */
+    
+}
+
+/* LEFT-COL */
+
+.left-col {
+    width: 0px;
+    height: 100%;
+    overflow: hidden;
+    border-right: 1px solid lightgray;
+
+    /* debug */
+    background-color: white;
+}
+
+.users {
+    border-top: 1px solid lightgrey;
+}
+
+.users img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    padding: 5px;
+    width: 80px;
+}
+
+.notifications-container,
+.search-container {
+    display: none;
+
+}
+@media screen and (min-width:768px) {
+    
+    .header img {
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        padding: 5px;
+        width: 80px;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+
+    .notifications-container,
+    .search-container {
+        display: inline-block;
+    }
+    
+}
+
+/* RIGHT-COL */
+
+.right-col {
+    width: calc(100% - 0px);
+    height: 100%;
+    overflow-y: scroll;
+
+}
 
 /* HEADER */
 
-header {
+.header {
     width: 100%;
+    height: 80px;
     display: flex;
     align-items: center;
-
-    /* background-color: #EAEAEA; */
+    background-color: #EAEAEA;
 
     /* debug */
-    background-color: aqua;
-    /* height: 90px; */
+    /* background-color: yellowgreen; */
+    
 }
 
 .avatar {
-    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 5px;
-    text-align: left;
 }
 
 .avatar img {
@@ -47,11 +123,8 @@ header {
     border-radius: 50%;
     aspect-ratio: 1;
     padding: 5px;
+    width: 80px;
 
-}
-
-.info-avatar {
-    width: 80%;
 }
 
 .utility {
@@ -64,34 +137,157 @@ header {
     .header {
     justify-content: space-between;
     gap: 0;
-        
+    
     }
-
 
     .utility {
         display: inline-block;
     }
+
+    .utility i {
+        padding: 5px;
+        color: gray;
+    }
+
+    .left-col {
+        width: 70px;
+    }
+
+    .right-col {
+        width: calc(100% - 70px);
+    }
 }
 
+@media screen and (min-width:1024px) {
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .app-container {
+        width: 80%;
+        height: 95%;
+    }
+
+
+    .left-col {
+        width: 200px;
+        overflow-y: scroll;
+    }
+
+    .right-col {
+        width: calc(100% - 200px);
+    }
+    
+}
 
 
 /* TEX-SECTION */
 
 .text-container {
-
+    width: 100%;
+    height: calc(100% - 130px);
+    overflow-y: scroll;
+    background-image: url(../img/mine.jpg);
     /* debug */
-    background-color: gold ;
-    min-height: 700px;
+    /* background-color: gold ; */
+}
+
+.sent {
+    width: 300px;
+    background-color: lightgreen;
+    padding: 15px;
+    border-radius: 15px;
+    margin-left: 35%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: justify;
 
 
 }
 
+.received {
+    width: 300px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin-left: 5%;
+}
+
+
+@media screen and (min-width:768px) {
+    .sent {
+        margin-left: 55%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .sent {
+        width: 500px;
+        margin-left: 60%;
+    }
+
+    .received {
+        width: 500px;
+    }
+    
+}
 
 /* FOOTER */
 
 footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #EAEAEA;
 
     /* debug */
-    background-color: blueviolet;
-    min-height: 54px;
+    /* background-color: blueviolet; */
+}
+
+.emoji-container,
+.voice-container {
+    display: none;
+}
+
+
+input {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+
+}
+
+
+
+
+@media screen and (min-width:768px) {
+    
+    footer {
+        justify-content: space-between;
+    }
+
+    .emoji-container,
+    .voice-container {
+        display: inline;
+        width: 10%;
+        font-size: 1.4rem;
+        color: gray;
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .text-box input {
+        width: 670px;
+    }
+
+    .voice-container {
+        text-align: right;
+    }
 }
